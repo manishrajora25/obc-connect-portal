@@ -1118,7 +1118,7 @@ const [saveProgress, setSaveProgress] = useState(0);
           setUserData(userDataForCard);
           setShowIdCard(true);
           
-          // 🔥 After ID card shows, show receipt modal after 1 second
+          
           const id3 = window.setTimeout(() => {
             setShowReceipt(true);
           }, 1000);
@@ -1133,11 +1133,10 @@ const [saveProgress, setSaveProgress] = useState(0);
       
     } catch (error) {
       console.error("Error fetching receipt:", error);
-      // Continue without receipt if error
-      // Start flow without receipt
+     
       setShowSuccessMessage(true);
       setSubmitted(true);
-      // ... rest of the flow
+      
     }
   };
 
@@ -1191,7 +1190,7 @@ const [saveProgress, setSaveProgress] = useState(0);
     if (imageInput instanceof HTMLInputElement) imageInput.value = "";
   };
 
-  // paste.txt में STATESDISTRICTS के बाद ये add करें
+ 
   // const VIDHANSHABHAS = [
   //   { id: 1, name: "सादुलशहर" },
   //   { id: 2, name: "गंगानगर" },
@@ -1793,7 +1792,7 @@ if (form.email.trim() && !validationRules.email.regex.test(form.email)) {
   ) => {
     let { name, value } = e.target;
 
-    // Only allow numeric input for mobile, whatsapp, aadhaar
+    
     if (
       name === "mobile" ||
       name === "whatsapp" ||
@@ -2092,7 +2091,7 @@ if (form.email.trim() && !validationRules.email.regex.test(form.email)) {
               // ✅ Step 2: Show saving loading
               setSavingData(true);  // 🔥 YE IMPORTANT HAI
               
-              // ✅ Step 3: Save membership data
+             
               const formDataToSend = new FormData();
               formDataToSend.append("memberName", form.memberName);
               formDataToSend.append("fatherName", form.fatherName);
